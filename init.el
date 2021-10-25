@@ -15,6 +15,10 @@
 (setq make-backup-files nil
       auto-save-default nil)
 
+(global-hl-line-mode 1)
+;; (set-face-background hl-line-face "#F2F2F2")
+;; (set-face-underline-p 'highlight t)
+
 ;; Settings for package archives
 (setq package-archives '(("emacs-china-gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("emacs-china-melpa" . "http://elpa.emacs-china.org/melpa/")
