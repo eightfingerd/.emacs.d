@@ -1,11 +1,19 @@
 ;; git remote set-url origin git@github:your-user-name/your-repo.git
 
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (defconst *is-mac* (eq system-type 'darwin))
 (defconst *is-linux* (eq system-type 'gnu/linux))
 (defconst *is-windows* (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
 
+(if *is-mac*
+    (setq delete-by-moving-to-trash t))
+
+;; (setq backup-directory-alist (quote (("." . "~/.backups"))))
+;; Settings for backup files
+(setq make-backup-files nil
+      auto-save-default nil)
 
 ;; Settings for package archives
 (setq package-archives '(("emacs-china-gnu"   . "http://elpa.emacs-china.org/gnu/")
