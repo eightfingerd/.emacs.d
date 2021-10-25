@@ -11,3 +11,8 @@
 
 (when (file-exists-p custom-file)
   (load-file custom-file))
+
+;; Locales (setting them earlier in this file doesn't work in X)
+(require 'init-locales)
+
+(provide 'init)

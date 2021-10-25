@@ -5,5 +5,7 @@ auto-save-list/
 custom.el
 *~
 \#*
+lisp/\#*
+
 
 

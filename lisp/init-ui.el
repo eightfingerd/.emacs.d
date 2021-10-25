@@ -6,6 +6,34 @@
 ;; (set-face-background hl-line-face "#F2F2F2")
 ;; (set-face-underline-p 'highlight t)
 
+;; Settings for highlight parentheses
+(use-package highlight-parentheses
+  :diminish
+  :hook (prog-mode . highlight-parentheses-mode))
+
+(use-package rainbow-delimiters
+  :diminish
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;; Indent grade guide line
+(use-package indent-guide
+  :hook (after-init . indent-guide-global-mode))
+
+;; [built-in] paren mode
+(use-package paren
+  :ensure nil
+  :config (show-paren-mode 1))
+
+;; [built-in] electric-pair
+(use-package electric
+  :ensure nil
+  :hook ((after-init . electric-indent-mode)
+	     (prog-mode . electric-pair-mode)))
+
+;; Beacon mode - highlight the line where your cursor is
+(use-package beacon
+  :unless *is-windows*
+  :hook (after-init . beacon-mode))
 
 ;; Fullscreen by default, as early as possible
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
