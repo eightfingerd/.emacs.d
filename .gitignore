@@ -3,6 +3,7 @@ smex-items
 transient/
 auto-save-list/
 custom.el
-\#init.el\#
-init.el~
+*~
+\#*
+
 
